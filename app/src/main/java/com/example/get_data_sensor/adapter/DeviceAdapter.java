@@ -89,7 +89,6 @@ public class DeviceAdapter extends BaseAdapter {
             convertView = View.inflate(context, R.layout.adapter_device, null);
             holder = new ViewHolder();
             convertView.setTag(holder);
-            holder.img_blue = (ImageView) convertView.findViewById(R.id.img_blue);
             holder.txt_name = (TextView) convertView.findViewById(R.id.txt_name);
             holder.txt_mac = (TextView) convertView.findViewById(R.id.txt_mac);
             holder.txt_rssi = (TextView) convertView.findViewById(R.id.txt_rssi);
@@ -108,15 +107,13 @@ public class DeviceAdapter extends BaseAdapter {
             int rssi = bleDevice.getRssi();
             holder.txt_name.setText(name);
             holder.txt_mac.setText(mac);
-            holder.txt_rssi.setText(String.valueOf(rssi));
+            holder.txt_rssi.setText(String.valueOf(rssi + " dBm"));
             if (isConnected) {
-                holder.img_blue.setImageResource(R.mipmap.ic_blue_connected);
                 holder.txt_name.setTextColor(0xFF1DE9B6);
                 holder.txt_mac.setTextColor(0xFF1DE9B6);
                 holder.layout_idle.setVisibility(View.GONE);
                 holder.layout_connected.setVisibility(View.VISIBLE);
             } else {
-                holder.img_blue.setImageResource(R.mipmap.ic_blue_remote);
                 holder.txt_name.setTextColor(0xFF000000);
                 holder.txt_mac.setTextColor(0xFF000000);
                 holder.layout_idle.setVisibility(View.VISIBLE);
@@ -155,7 +152,6 @@ public class DeviceAdapter extends BaseAdapter {
     }
 
     static class ViewHolder {
-        ImageView img_blue;
         TextView txt_name;
         TextView txt_mac;
         TextView txt_rssi;
