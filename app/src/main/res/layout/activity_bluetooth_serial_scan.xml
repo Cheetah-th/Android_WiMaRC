@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:animateLayoutChanges="true"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:title="@string/app_name"
+        app:titleTextColor="@android:color/white" />
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ProgressBar
+            android:id="@+id/scan_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="15dip"
+            android:indeterminate="true"/>
+
+        <TextView
+            android:id="@+id/scan_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/scan_list"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginEnd="-1dp"
+            android:layout_marginBottom="-3dp"
+            android:layout_toEndOf="@+id/scan_progress"
+            android:gravity="center_vertical"
+            android:padding="15dip"
+            android:textSize="18sp" />
+
+        <ListView
+            android:id="@+id/scan_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/scan_progress"
+            android:layout_above="@+id/scan_scan_again" />
+
+        <Button
+            android:id="@+id/scan_scan_again"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Scan again"
+            android:backgroundTint="#4C4C4C"
+            android:textColor="#FFFFFF"
+            android:textSize="24dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignEnd="@+id/scan_state" />
+
+    </RelativeLayout>
+
+</LinearLayout>
