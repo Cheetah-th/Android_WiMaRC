@@ -73,6 +73,7 @@ public class BluetoothBLE extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_bluetooth_ble);
         initView();
 
+
         BleManager.getInstance().init(getApplication());
         BleManager.getInstance()
                 .enableLog(true)

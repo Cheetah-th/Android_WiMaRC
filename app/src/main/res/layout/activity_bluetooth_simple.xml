@@ -26,7 +26,7 @@
         android:backgroundTint="#4C4C4C"
         android:text="Listen"
         android:textColor="#FFFFFF"
-        android:textSize="24dp"
+        android:textSize="18dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar" />
@@ -39,7 +39,7 @@
         android:backgroundTint="#4C4C4C"
         android:text="Devices"
         android:textColor="#FFFFFF"
-        android:textSize="24dp"
+        android:textSize="18dp"
         app:layout_constraintStart_toEndOf="@+id/btnListen"
         app:layout_constraintTop_toTopOf="@+id/btnListen" />
 
@@ -96,13 +96,15 @@
 
     <Button
         android:id="@+id/btnSend"
-        android:layout_width="250dp"
+        android:layout_width="120dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
+        android:layout_marginRight="130dp"
         android:backgroundTint="#4C4C4C"
         android:text="Send"
         android:textColor="#FFFFFF"
-        android:textSize="24dp"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtWritemsg" />
@@ -117,7 +119,7 @@
         android:backgroundTint="#4C4C4C"
         android:text="Open"
         android:textColor="#FFFFFF"
-        android:textSize="24dp"
+        android:textSize="18dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/msgbox" />
@@ -130,22 +132,22 @@
         android:backgroundTint="#4C4C4C"
         android:text="Close"
         android:textColor="#FFFFFF"
-        android:textSize="24dp"
+        android:textSize="18dp"
         app:layout_constraintStart_toEndOf="@+id/btnOpen"
         app:layout_constraintTop_toTopOf="@+id/btnOpen" />
 
     <Button
         android:id="@+id/btnBack"
-        android:layout_width="250dp"
+        android:layout_width="120dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
         android:backgroundTint="#4C4C4C"
         android:text="Back"
         android:textColor="#FFFFFF"
-        android:textSize="24dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnSend" />
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnSend"
+        app:layout_constraintTop_toBottomOf="@+id/txtWritemsg" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

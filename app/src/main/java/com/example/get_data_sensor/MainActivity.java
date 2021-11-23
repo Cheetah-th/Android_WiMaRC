@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
 
     private boolean refresh = false;
 
-    private static final String GET_DATA_SENSOR = "http://203.185.137.241/wimarctest/get_data_sensor.php";
+    private static final String GET_DATA_SENSOR = "http://203.185.137.241/wimarctest/android_PHP/get_data_sensor.php";
     private static final String TAG = "MainActivity";
 
     @Override
@@ -181,7 +181,7 @@ public class MainActivity extends AppCompatActivity {
         btnComment.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), AddComment.class);
+                Intent intent = new Intent(getApplicationContext(), Send_Comment.class);
                 intent.putExtra("username", dbname);
                 doTask.cancel();
                 finish();

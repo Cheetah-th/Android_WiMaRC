@@ -26,8 +26,7 @@
         android:usesCleartextTraffic="true">
         <activity android:name=".Wifi_list" />
         <activity android:name=".BluetoothBLE" />
-        <activity android:name=".AddImage" />
-        <activity android:name=".AddComment" />
+        <activity android:name=".Send_Comment" />
         <activity android:name=".BluetoothSimple" />
         <activity android:name=".BluetoothSerial_Chat" />
         <activity android:name=".BluetoothSerial_Scan" />

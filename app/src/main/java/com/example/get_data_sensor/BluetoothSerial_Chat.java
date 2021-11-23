@@ -7,6 +7,8 @@ import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 import android.content.ActivityNotFoundException;
 import android.content.BroadcastReceiver;
+import android.content.ClipData;
+import android.content.ClipboardManager;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
@@ -23,6 +25,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ScrollView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import me.aflak.bluetooth.Bluetooth;
 
@@ -30,7 +33,7 @@ public class BluetoothSerial_Chat extends AppCompatActivity implements Bluetooth
     private String name;
     private Bluetooth b;
     private EditText message;
-    private Button send;
+    private Button send, paste;
     private TextView text;
     private ScrollView scrollView;
     private boolean registered = false;
@@ -46,6 +49,7 @@ public class BluetoothSerial_Chat extends AppCompatActivity implements Bluetooth
         text = findViewById(R.id.text);
         message = findViewById(R.id.message);
         send = findViewById(R.id.send);
+        paste = findViewById(R.id.paste);
         scrollView = findViewById(R.id.scrollView);
 
         text.setMovementMethod(new ScrollingMovementMethod());
@@ -69,6 +73,17 @@ public class BluetoothSerial_Chat extends AppCompatActivity implements Bluetooth
                 message.setText("");
                 b.send(msg);
                 Display("You: " + msg);
+            }
+        });
+
+        paste.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ClipboardManager clipboardManager = (ClipboardManager) getSystemService(CLIPBOARD_SERVICE);
+                ClipData clipData = clipboardManager.getPrimaryClip();
+                ClipData.Item item = clipData.getItemAt(0);
+                message.setText(item.getText().toString());
+                Toast.makeText (BluetoothSerial_Chat.this, "Pasted", Toast.LENGTH_SHORT).show();
             }
         });
 

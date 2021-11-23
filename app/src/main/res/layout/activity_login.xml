@@ -27,7 +27,7 @@
         android:paddingLeft="16dp"
         android:password="false"
         android:textAlignment="center"
-        android:textSize="24dp"
+        android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
@@ -43,7 +43,7 @@
         android:paddingLeft="16dp"
         android:password="true"
         android:textAlignment="center"
-        android:textSize="24dp"
+        android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtUsername" />
@@ -62,41 +62,41 @@
 
     <Button
         android:id="@+id/btnLogin"
-        android:layout_width="200dp"
+        android:layout_width="120dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
+        android:layout_marginRight="130dp"
         android:backgroundTint="#4C4C4C"
         android:text="Login"
         android:textColor="#FFFFFF"
-        android:textSize="24dp"
+        android:textSize="18dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/checkRemember" />
 
     <Button
         android:id="@+id/btnControl"
-        android:layout_width="200dp"
+        android:layout_width="120dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:backgroundTint="#4C4C4C"
         android:text="Control"
         android:textColor="#FFFFFF"
-        android:textSize="24dp"
+        android:textSize="18dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnLogin" />
 
     <Button
         android:id="@+id/btnExit"
-        android:layout_width="200dp"
+        android:layout_width="120dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
         android:backgroundTint="#4C4C4C"
         android:text="Exit"
         android:textColor="#FFFFFF"
-        android:textSize="24dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnControl" />
+        android:textSize="18dp"
+        app:layout_constraintStart_toEndOf="@+id/btnLogin"
+        app:layout_constraintTop_toTopOf="@+id/btnLogin" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

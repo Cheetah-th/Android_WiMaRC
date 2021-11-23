@@ -101,7 +101,8 @@ public class CharacteristicOperationFragment extends Fragment {
                                             runOnUiThread(new Runnable() {
                                                 @Override
                                                 public void run() {
-                                                    addText(txt, HexUtil.formatHexString(data, true));
+                                                    String hex = HexUtil.formatHexString(data, true);
+                                                    addText(txt, hex + " = " + hexToASCII(hex.replaceAll(" ", "")));
                                                 }
                                             });
                                         }
@@ -148,7 +149,7 @@ public class CharacteristicOperationFragment extends Fragment {
                                                 public void run() {
                                                     addText(txt, "write success, current: " + current
                                                             + " total: " + total
-                                                            + " justWrite: " + HexUtil.formatHexString(justWrite, true));
+                                                            + " justWrite: " + HexUtil.formatHexString(justWrite, true) + " = " + et.getText().toString());
                                                 }
                                             });
                                         }
@@ -352,13 +353,23 @@ public class CharacteristicOperationFragment extends Fragment {
     }
 
     private String asciiToHex(String str) {
-        StringBuilder output = new StringBuilder();
+        StringBuilder output = new StringBuilder("");
 
         char[] charArray = str.toCharArray();
 
         for (char c : charArray) {
             String charToHex = Integer.toHexString(c);
             output.append(charToHex);
+        }
+        return output.toString();
+    }
+
+    private static String hexToASCII(String hexValue) {
+        StringBuilder output = new StringBuilder("");
+
+        for (int i = 0; i < hexValue.length(); i += 2) {
+            String str = hexValue.substring(i, i + 2);
+            output.append((char) Integer.parseInt(str, 16));
         }
         return output.toString();
     }

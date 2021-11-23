@@ -24,7 +24,7 @@ public class Login extends AppCompatActivity {
     Button btnLogin, btnControl, btnExit;
     CheckBox checkRemember;
 
-    private static final String USER_LOGIN_URL = "http://203.185.137.241/wimarctest/user-login.php";
+    private static final String USER_LOGIN_URL = "http://203.185.137.241/wimarctest/android_PHP/user_login.php";
     private static final String TAG = "Login";
     ProgressDialog progressDialog;
 
@@ -155,7 +155,7 @@ public class Login extends AppCompatActivity {
             editor.putString("pref_pass", txtPassword.getText().toString());
             editor.putBoolean("pref_check", boolIsChecked);
             editor.apply();
-            Toast.makeText(getApplicationContext(), "Username and password have been saved", Toast.LENGTH_SHORT).show();
+//            Toast.makeText(getApplicationContext(), "Username and password have been saved", Toast.LENGTH_SHORT).show();
         } else {
             mPrefs.edit().clear().apply();
         }

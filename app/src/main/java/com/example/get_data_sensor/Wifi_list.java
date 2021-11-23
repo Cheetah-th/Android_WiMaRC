@@ -1,7 +1,9 @@
 package com.example.get_data_sensor;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
+import android.app.ProgressDialog;
 import android.content.BroadcastReceiver;
 import android.content.ClipboardManager;
 import android.content.Context;
@@ -42,11 +44,8 @@ public class Wifi_list extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_wifi_list);
 
-        buttonScan = findViewById(R.id.scanBtn);
-        copyToClipboard = findViewById(R.id.copyToClipboard);
-        wifiName = findViewById(R.id.txtwifiName);
-        wifiPass = findViewById(R.id.txtwifiPass);
-        listView = findViewById(R.id.wifiList);
+        initViews();
+        initEvent();
 
         wifiManager = (WifiManager) getApplicationContext().getSystemService(Context.WIFI_SERVICE);
         adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, arrayList);
@@ -56,7 +55,26 @@ public class Wifi_list extends AppCompatActivity {
             wifiManager.setWifiEnabled(true);
             scanWifi();
         }
+    }
 
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode == KeyEvent.KEYCODE_BACK) {
+            finish();
+            return true;
+        }
+        return super.onKeyDown(keyCode, event);
+    }
+
+    private void initViews() {
+        buttonScan = findViewById(R.id.scanBtn);
+        copyToClipboard = findViewById(R.id.copyToClipboard);
+        wifiName = findViewById(R.id.txtwifiName);
+        wifiPass = findViewById(R.id.txtwifiPass);
+        listView = findViewById(R.id.wifiList);
+    }
+
+    private void initEvent() {
         buttonScan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -79,18 +97,9 @@ public class Wifi_list extends AppCompatActivity {
                 ClipboardManager clipboardManager = (ClipboardManager) getSystemService(CLIPBOARD_SERVICE);
                 clipboardManager.setText(txt);
                 Toast.makeText(Wifi_list.this, "Copy to clipboard", Toast.LENGTH_LONG).show();
+                finish();
             }
         });
-
-    }
-
-    @Override
-    public boolean onKeyDown(int keyCode, KeyEvent event) {
-        if (keyCode == KeyEvent.KEYCODE_BACK) {
-            finish();
-            return true;
-        }
-        return super.onKeyDown(keyCode, event);
     }
 
     private void scanWifi() {
