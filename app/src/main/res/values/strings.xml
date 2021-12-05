@@ -1,11 +1,65 @@
 <resources>
     <string name="app_name">Android WiMaRC</string>
-    <string name="title_activity_bluetooth_serial_scan">BluetoothSerial_Scan</string>
+
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
     <string name="second_fragment_label">Second Fragment</string>
     <string name="next">Next</string>
     <string name="previous">Previous</string>
+
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="remember">Remember me</string>
+    <string name="btn_login">Login</string>
+    <string name="btn_exit">Exit</string>
+    <string name="btn_control">Control</string>
+    <string name="btn_comment">Comment</string>
+    <string name="btn_logout">Logout</string>
+
+    <string name="et_comment1">Watering</string>
+    <string name="et_comment2">Fertilizing</string>
+    <string name="et_comment3">Pesticide use</string>
+    <string name="et_comment4">Pruning</string>
+    <string name="et_comment5">Other</string>
+    <string name="text_upload_image">Upload image</string>
+    <string name="btn_gallery">Gallery</string>
+    <string name="btn_camera">Camera</string>
+    <string name="btn_detect">Detect</string>
+    <string name="btn_classify">Classify</string>
+    <string name="btn_send">Send</string>
+    <string name="et_comment6">Comment image</string>
+
+    <string name="btn_scan_wifi">Scan WIFI</string>
+    <string name="et_wifi_name">WIFI Name</string>
+    <string name="et_wifi_pass">WIFI Password</string>
+    <string name="btn_copy">Copy</string>
+
+    <string name="bluetooth1">Bluetooth Simple</string>
+    <string name="bluetooth2">Bluetooth Serial</string>
+    <string name="bluetooth3">Bluetooth Low Energy</string>
+
+    <string name="bluetooth_serial_button_chat1">Paste</string>
+    <string name="bluetooth_serial_button_chat2">Send</string>
+    <string name="bluetooth_serial_edittext_chat">Your message</string>
+    <string name="bluetooth_serial_button_scan">Scan again</string>
+    <string name="bluetooth_serial_text_select1">Select a device.</string>
+    <string name="bluetooth_serial_text_select2">You must be paired with your device to see it in the list. Pull to refresh the list.</string>
+    <string name="bluetooth_serial_button_select">Device not found!</string>
+
+    <string name="bluetooth_simple_button1">Listen</string>
+    <string name="bluetooth_simple_button2">Devices</string>
+    <string name="bluetooth_simple_button3">Open</string>
+    <string name="bluetooth_simple_button4">Close</string>
+    <string name="bluetooth_simple_button5">Send</string>
+    <string name="bluetooth_simple_button6">Back</string>
+    <string name="bluetooth_simple_text1">Status</string>
+    <string name="bluetooth_simple_text2">Message</string>
+
+    <string name="close_connection">Close Connection</string>
+    <string name="wifi_list">WIFI List</string>
+    <string name="back_to_main_page">Back to main page</string>
+    <string name="open_web">Open website</string>
+    <string name="refresh">Refresh</string>
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
@@ -41,7 +95,7 @@
     <string name="setting_name">Enter a broadcast name for Bluetooth devices, separated by English commas</string>
     <string name="setting_mac">Enter Bluetooth device MAC</string>
     <string name="setting_uuid">Enter Bluetooth device UUID, separated by commas in English</string>
-    <string name="input_hex">Please enter the HEX format command</string>
+    <string name="input_hex">Your message</string>
     <string name="connect">Connect</string>
     <string name="connected">Connected</string>
     <string name="disconnect">Disconnect</string>

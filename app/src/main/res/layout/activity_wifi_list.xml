@@ -3,6 +3,7 @@
     android:orientation="vertical"
     android:padding="10dp"
     android:layout_width="match_parent"
+    android:background="@drawable/gradient_bkt"
     android:layout_height="match_parent">
 
     <ListView
@@ -17,10 +18,10 @@
         android:layout_height="50dp"
         android:layout_gravity="bottom"
         android:layout_margin="15dp"
-        android:backgroundTint="#4C4C4C"
         android:textColor="#FFFFFF"
+        android:background="@drawable/button01"
         android:textSize="24dp"
-        android:text="Scan WiFi" />
+        android:text="@string/btn_scan_wifi" />
 
     <EditText
         android:id="@+id/txtwifiName"
@@ -28,9 +29,10 @@
         android:layout_height="50dp"
         android:layout_gravity="bottom"
         android:layout_margin="15dp"
-        android:hint="WIFI Name"
-        android:background="@drawable/edit_text1"
-        android:paddingLeft="16dp"
+        android:hint="@string/et_wifi_name"
+        android:background="@drawable/edit_text"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
         android:password="false"
         android:textSize="16dp" />
 
@@ -40,9 +42,10 @@
         android:layout_height="50dp"
         android:layout_gravity="bottom"
         android:layout_margin="15dp"
-        android:hint="WIFI Password"
-        android:background="@drawable/edit_text1"
-        android:paddingLeft="16dp"
+        android:hint="@string/et_wifi_pass"
+        android:background="@drawable/edit_text"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
         android:password="false"
         android:textSize="16dp" />
 
@@ -52,9 +55,9 @@
         android:layout_height="50dp"
         android:layout_gravity="bottom"
         android:layout_margin="15dp"
-        android:backgroundTint="#4C4C4C"
         android:textColor="#FFFFFF"
+        android:background="@drawable/button02"
         android:textSize="24dp"
-        android:text="Copy" />
+        android:text="@string/btn_copy" />
 
 </LinearLayout>

@@ -43,7 +43,7 @@ public class BluetoothSimple extends AppCompatActivity {
     static final int STATE_CONNECTION_FAILED = 4;
     static final int STATE_MESSAGE_RECEIVED = 5;
 
-    int REQUEST_ENABLE_BLUETOOTH = 1;
+    private static final int REQUEST_ENABLE_BLUETOOTH = 6;
 
     private static final String APP_NAME = "SENSOR";
     private static final UUID MY_UUID = UUID.fromString("8ce255c0-223a-11e0-ac64-0803450c9a66");

@@ -109,13 +109,13 @@ public class DeviceAdapter extends BaseAdapter {
             holder.txt_mac.setText(mac);
             holder.txt_rssi.setText(String.valueOf(rssi + " dBm"));
             if (isConnected) {
-                holder.txt_name.setTextColor(0xFF1DE9B6);
-                holder.txt_mac.setTextColor(0xFF1DE9B6);
+//                holder.txt_name.setTextColor(0xFF1DE9B6);
+//                holder.txt_mac.setTextColor(0xFF1DE9B6);
                 holder.layout_idle.setVisibility(View.GONE);
                 holder.layout_connected.setVisibility(View.VISIBLE);
             } else {
-                holder.txt_name.setTextColor(0xFF000000);
-                holder.txt_mac.setTextColor(0xFF000000);
+//                holder.txt_name.setTextColor(0xFF000000);
+//                holder.txt_mac.setTextColor(0xFF000000);
                 holder.layout_idle.setVisibility(View.VISIBLE);
                 holder.layout_connected.setVisibility(View.GONE);
             }

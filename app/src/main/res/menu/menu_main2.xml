@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:id="@+id/open_web"
-        android:title="Open website"/>
+        android:title="@string/open_web"/>
     <item android:id="@+id/refresh"
-        android:title="Refresh"/>
+        android:title="@string/refresh"/>
     <item android:id="@+id/logout"
-        android:title="Log out"/>
+        android:title="@string/btn_logout"/>
 </menu>

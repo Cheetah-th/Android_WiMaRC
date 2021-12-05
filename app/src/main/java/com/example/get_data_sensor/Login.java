@@ -24,7 +24,7 @@ public class Login extends AppCompatActivity {
     Button btnLogin, btnControl, btnExit;
     CheckBox checkRemember;
 
-    private static final String USER_LOGIN_URL = "http://203.185.137.241/wimarctest/android_PHP/user_login.php";
+    private static final String USER_LOGIN_URL = "http://203.185.137.241/wimarctest/android_PHP/check_login.php";
     private static final String TAG = "Login";
     ProgressDialog progressDialog;
 
@@ -116,6 +116,7 @@ public class Login extends AppCompatActivity {
                     .setCallback(new FutureCallback<String>() {
                         @Override
                         public void onCompleted(Exception e, String result) {
+                            progressDialog.dismiss();
                             if (result.equals("Login successfully")) {
 
                                 //Remember me
@@ -124,7 +125,6 @@ public class Login extends AppCompatActivity {
                                 //go to MainActivity
                                 Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                                 intent.putExtra("username", username);
-                                progressDialog.dismiss();
                                 finish();
                                 startActivity(intent);
 

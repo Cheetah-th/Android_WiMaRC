@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:id="@+id/main_page"
-        android:title="Back to main page"/>
+        android:title="@string/back_to_main_page"/>
     <item android:id="@+id/logout"
-        android:title="Log out"/>
+        android:title="@string/btn_logout"/>
 </menu>

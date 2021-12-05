@@ -23,7 +23,7 @@
 
         <EditText
             android:id="@+id/message"
-            android:hint="Your message"
+            android:hint="@string/bluetooth_serial_edittext_chat"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
@@ -35,7 +35,7 @@
 
         <Button
             android:id="@+id/paste"
-            android:text="Paste"
+            android:text="@string/bluetooth_serial_button_chat1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignTop="@+id/message"
@@ -48,7 +48,7 @@
 
         <Button
             android:id="@+id/send"
-            android:text="Send"
+            android:text="@string/bluetooth_serial_button_chat2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignTop="@+id/message"

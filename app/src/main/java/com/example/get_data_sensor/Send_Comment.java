@@ -58,7 +58,7 @@ public class Send_Comment extends AppCompatActivity {
     ProgressDialog progressDialog;
     String GetImageComment;
 
-    String ServerUploadPath = "http://203.185.137.241/wimarctest/android_PHP/add_comment.php";
+    String ServerUploadPath = "http://203.185.137.241/wimarctest/android_PHP/save_comment.php";
 
     private static final int REQUEST_IMAGE_CAPTURE = 102;
     private static final int GALLERY_REQUEST_CODE = 105;
@@ -195,7 +195,7 @@ public class Send_Comment extends AppCompatActivity {
                 if (bitmap != null) {
                     progressDialog = ProgressDialog.show(Send_Comment.this,"Sending comment","Please wait",false,false);
                     GetImageComment = imageName.getText().toString();
-                    uploadImageToServer(ServerUploadPath);
+                    sendComment(ServerUploadPath);
                 } else {
                     Toast.makeText(Send_Comment.this, "Please select image", Toast.LENGTH_LONG).show();
                 }
@@ -269,7 +269,7 @@ public class Send_Comment extends AppCompatActivity {
         }
     }
 
-    private void uploadImageToServer(@NonNull final String url) {
+    private void sendComment(@NonNull final String url) {
         //Encode data
         getData();
         bitmap = reduceBitmapSize(bitmap, 921600);

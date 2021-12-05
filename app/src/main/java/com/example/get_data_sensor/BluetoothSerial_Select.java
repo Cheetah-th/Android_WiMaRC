@@ -29,7 +29,7 @@ public class BluetoothSerial_Select extends Activity implements PullToRefresh.On
     private PullToRefresh pull_to_refresh;
     private boolean registered = false;
     BluetoothAdapter bluetoothAdapter;
-    int REQUEST_ENABLE_BLUETOOTH = 1;
+    int REQUEST_ENABLE_BLUETOOTH = 6;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,7 +40,7 @@ public class BluetoothSerial_Select extends Activity implements PullToRefresh.On
 
         if (!bluetoothAdapter.isEnabled()) {
             Intent enableIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
-            startActivityForResult(enableIntent,REQUEST_ENABLE_BLUETOOTH);
+            startActivityForResult(enableIntent, REQUEST_ENABLE_BLUETOOTH);
         }
 
         IntentFilter filter = new IntentFilter(BluetoothAdapter.ACTION_STATE_CHANGED);

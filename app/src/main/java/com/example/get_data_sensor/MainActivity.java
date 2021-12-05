@@ -48,8 +48,9 @@ public class MainActivity extends AppCompatActivity {
     private String M2;
     private String Lux;
 
-    private String url = "http://203.185.137.241/Chan07/image/H16.jpg";
     private String dbname;
+    private String url1;
+    private String url2;
 
     TimerTask doTask;
 
@@ -65,10 +66,13 @@ public class MainActivity extends AppCompatActivity {
 
         dbname = getIntent().getExtras().getString("username");
 
+        url1 = "http://203.150.37.159/" + dbname + "/image/H06.jpg";
+        url2 = "http://203.150.37.159/nectecGreen01/image/" + localDate() + "/H12.jpg";
+
         initViews();
         initEvent();
 
-        getDataFromServer();
+        viewEnvironmentData();
         autoRefresh();
     }
 
@@ -190,7 +194,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    private void getDataFromServer() {
+    private void viewEnvironmentData() {
         //Check and get data
         Ion.with(this)
                 .load(GET_DATA_SENSOR) //URL to PHP script for getting data
@@ -224,7 +228,7 @@ public class MainActivity extends AppCompatActivity {
                             }
 
                             //Show progress
-                            showProgress(dbname);
+                            showData(dbname);
                         }
                         else {
                             //Show error
@@ -234,10 +238,10 @@ public class MainActivity extends AppCompatActivity {
                 });
     }
 
-    private void showProgress(String dbname) {
+    private void showData(String dbname) {
         Glide
                 .with(this)
-                .load(url)
+                .load(url1)
                 .apply(new RequestOptions().override(400, 225))
                 .dontAnimate()
                 .into(imageView);
@@ -257,7 +261,7 @@ public class MainActivity extends AppCompatActivity {
 
         Glide
                 .with(this)
-                .load("http://203.150.37.159/nectecGreen01/image/" + localDate() + "H12.jpg")
+                .load(url2)
                 .apply(new RequestOptions().override(400, 225))
                 .dontAnimate()
                 .into(imageView1);

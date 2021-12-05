@@ -37,7 +37,7 @@
         android:id="@+id/scan_scan_again"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Scan again"
+        android:text="@string/bluetooth_serial_button_scan"
         android:backgroundTint="#4C4C4C"
         android:textColor="#FFFFFF"
         android:textSize="18dp"
